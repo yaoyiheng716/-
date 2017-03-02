@@ -1,0 +1,35 @@
+例如10个东西 它们权值分别为 [1,1,1,1,1,1,1,1,1,1]
+items
+ sum = 1+1+1+1+1+1+1+1+1+1;//权值之和
+int cur = 0;
+for(int i = 0; i<num; i++){//num为需要几个数
+int r =getRandomInt(0, sum);
+ if (r < cur) {
+ sum -=该东西的权值;
+ system.out.println("该东西");
+  break;
+  }
+ cur += 该东西的权值;
+}
+
+
+
+
+
+
+ /**
+   * 获取指定范围内的随机数[min,max)
+   *
+   * @param min 最小值
+   * @param max 最大值
+   * @return
+   */
+  public static int getRandomInt(int min, int max)
+  {
+    if (min >= max)
+    {
+      throw new IllegalArgumentException("范围参数非法:" + min + "/" + max);
+    }
+    int i = Math.abs(r.nextInt()) % (max - min);
+    return min + i;
+  }
