@@ -1,1 +1,7 @@
 Systet.out.println();有synchronized关键字，它的作用是强制清除本地线程缓存，重新从主内存读取缓存，然后刷新修改过的本地缓存到主内存
+public void println(String x){
+  synchronized(this){
+    print(x);
+    newLine();
+  }
+}
